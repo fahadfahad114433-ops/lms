@@ -43,6 +43,7 @@ lms-product/
 | Phase | Module | Status |
 |---|---|---|
 | 0 | Project scaffold + tooling + deployment pipeline | ✅ done |
+| M1 | Admin CMS Dashboard Foundation (UI shell, sidebar, header, overview) | ✅ done |
 | 1 | Auth, Users, Roles + basic SMTP mailer | ⬜ |
 | 2 | Settings + white-label branding | ⬜ |
 | 3 | Public website shell + course catalog (read-only) | ⬜ |
