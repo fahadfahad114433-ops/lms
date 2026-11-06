@@ -17,3 +17,7 @@ npm-debug.log*
 
 # env files
 .env*
+
+# typescript build artifacts
+*.tsbuildinfo
+next-env.d.ts
