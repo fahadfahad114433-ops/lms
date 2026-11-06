@@ -1,0 +1,29 @@
+# Next.js static export on Apache (Hostinger shared hosting)
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# /admin (optional trailing slash) -> /admin.html
+RewriteRule ^admin/?$ admin.html [L]
+
+# pretty URLs: /path -> /path.html when the html file exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# long-cache immutable Next.js assets
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
