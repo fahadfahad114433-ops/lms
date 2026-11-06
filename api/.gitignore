@@ -1,0 +1,33 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+# .env.example is tracked (safe template with no secrets)
+.phpactor.json
+.phpunit.result.cache
+/.codex
+/.cursor/
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/fonts-manifest.dev.json
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+# NOTE: vendor/ is intentionally COMMITTED to git because Hostinger hPanel
+# Git deploy cannot run composer. Only remove this exception if moving to VPS.
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# local dev database
+/database/*.sqlite
+/database/*.sqlite-journal
